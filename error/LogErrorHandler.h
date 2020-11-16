@@ -5,10 +5,15 @@
 #ifndef NOTIFICATOR_LOGERRORHANDLER_H
 #define NOTIFICATOR_LOGERRORHANDLER_H
 
+#include <iostream>
+
 #include "ErrorHandler.h"
 
 class LogErrorHandler : ErrorHandler {
 public:
+    std::ostream& log;
+
+    LogErrorHandler(std::ostream &log);
     void handle(const Error& error) const override;
 };
 

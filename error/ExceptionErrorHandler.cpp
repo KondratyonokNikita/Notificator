@@ -4,6 +4,8 @@
 
 #include "ExceptionErrorHandler.h"
 
+#include <stdexcept>
+
 void ExceptionErrorHandler::handle(const Error &error) const {
-//    TODO implement
+    throw std::runtime_error(error.message);
 }

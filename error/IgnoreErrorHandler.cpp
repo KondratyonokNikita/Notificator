@@ -5,5 +5,5 @@
 #include "IgnoreErrorHandler.h"
 
 void IgnoreErrorHandler::handle(const Error &error) const {
-//    TODO implement
+//    do nothing
 }

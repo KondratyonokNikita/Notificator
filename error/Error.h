@@ -5,9 +5,11 @@
 #ifndef NOTIFICATOR_ERROR_H
 #define NOTIFICATOR_ERROR_H
 
+#include <string>
 
 class Error {
-
+public:
+    const std::string message;
 };
 
 

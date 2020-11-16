@@ -4,6 +4,8 @@
 
 #include "LogErrorHandler.h"
 
+LogErrorHandler::LogErrorHandler(std::ostream &log) : log(log) {}
+
 void LogErrorHandler::handle(const Error &error) const {
-//    TODO implement
+    log << error.message << std::endl;
 }

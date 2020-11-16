@@ -5,14 +5,17 @@
 #ifndef NOTIFICATOR_TELEGRAMNOTIFICATOR_H
 #define NOTIFICATOR_TELEGRAMNOTIFICATOR_H
 
+#include <vector>
+
 #include "Notificator.h"
+#include "../error/ErrorHandler.h"
 
 class TelegramNotificator : Notificator {
 public:
-    void notify(const std::list<Contact>& contacts, const Message& message) const override;
+    void notify(const Message& message, const std::vector<Contact>& contacts) const override;
 
 protected:
-    ErrorHandler& getErrorHandler() const override;
+    [[nodiscard]] ErrorHandler& getErrorHandler() const override;
 };
 
 

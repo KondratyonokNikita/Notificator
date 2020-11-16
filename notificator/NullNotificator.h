@@ -5,14 +5,17 @@
 #ifndef NOTIFICATOR_NULLNOTIFICATOR_H
 #define NOTIFICATOR_NULLNOTIFICATOR_H
 
+#include <vector>
+
 #include "Notificator.h"
+#include "../error/ErrorHandler.h"
 
 class NullNotificator : Notificator {
 public:
-    void notify(const std::list<Contact>& contacts, const Message& message) const override;
+    void notify(const Message& message, const std::vector<Contact>& contacts) const override;
 
 protected:
-    ErrorHandler& getErrorHandler() const override;
+    [[nodiscard]] ErrorHandler& getErrorHandler() const override;
 };
 
 

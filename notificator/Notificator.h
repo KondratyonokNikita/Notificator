@@ -15,7 +15,7 @@
 // interface
 class Notificator {
 public:
-    ErrorHandler* errorHandler;
+    ErrorHandler* errorHandler = nullptr;
 
     virtual void notify(Message* message, std::vector<Contact*>& contacts) const = 0;
 };

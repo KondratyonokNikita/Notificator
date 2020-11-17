@@ -15,16 +15,12 @@
 class Manager {
 public:
     void addNotificator(const std::string& name, Notificator* notificator);
-    void addContact(const std::string& name, Contact* contact);
 
     void notify(const std::string& notificatorName, Message* message, std::vector<Contact*>& contactsVector) const;
-    void notifyAllContacts(const std::string& notificatorName, Message* message) const;
-    void notifyAllNotificators(Message* message, std::vector<Contact*>& contactsVector) const;
-    void notifyAll(Message* message) const;
+    void notifyAll(Message* message, std::vector<Contact*>& contactsVector) const;
 
 private:
     std::map<std::string, Notificator*> notificators;
-    std::map<std::string, Contact*> contacts;
 };
 
 

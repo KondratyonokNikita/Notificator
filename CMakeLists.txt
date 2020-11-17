@@ -5,6 +5,8 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Notificator
         main.cpp
+        Manager.cpp
+        Manager.h
 
         notificator/Notificator.h
         notificator/NullNotificator.cpp

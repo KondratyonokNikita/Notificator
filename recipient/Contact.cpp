@@ -3,3 +3,7 @@
 //
 
 #include "Contact.h"
+
+#include <utility>
+
+Contact::Contact(std::string name) : name(std::move(name)), recipients(std::vector<Recipient>()) {}

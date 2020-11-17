@@ -4,7 +4,7 @@
 
 #include "NullNotificator.h"
 
-void NullNotificator::notify(const Message &message, const std::vector<Contact> &contacts) const {
+void NullNotificator::notify(const Message& message, const std::vector<Contact*>& contacts) const {
 //    TODO implement
 }
 

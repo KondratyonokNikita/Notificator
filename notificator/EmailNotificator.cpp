@@ -4,7 +4,7 @@
 
 #include "EmailNotificator.h"
 
-void EmailNotificator::notify(const Message &message, const std::vector<Contact> &contacts) const {
+void EmailNotificator::notify(const Message& message, const std::vector<Contact*>& contacts) const {
 //    TODO implement
 }
 

@@ -6,13 +6,14 @@
 #define NOTIFICATOR_CONTACT_H
 
 #include <string>
-#include <list>
+#include <vector>
 #include "Recipient.h"
 
 class Contact {
 public:
-    const std::string name;
-    const std::list<Recipient> recipients;
+    explicit Contact(std::string name);
+    std::string name;
+    std::vector<Recipient> recipients;
 };
 
 

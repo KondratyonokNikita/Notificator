@@ -15,6 +15,8 @@ add_executable(Notificator
         notificator/EmailNotificator.h
         notificator/TelegramNotificator.cpp
         notificator/TelegramNotificator.h
+        notificator/LogNotificator.cpp
+        notificator/LogNotificator.h
 
         message/TextMessage.cpp
         message/TextMessage.h

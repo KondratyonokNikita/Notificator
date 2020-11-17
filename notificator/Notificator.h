@@ -15,14 +15,9 @@
 // interface
 class Notificator {
 public:
-    virtual void notify(const Message& message, const std::vector<Contact*>& contacts) const = 0;
+    ErrorHandler* errorHandler;
 
-protected:
-    [[nodiscard]] virtual ErrorHandler& getErrorHandler() const = 0;
-
-    void handleError(const Error& error) {
-        getErrorHandler().handle(error);
-    }
+    virtual void notify(Message* message, std::vector<Contact*>& contacts) const = 0;
 };
 
 

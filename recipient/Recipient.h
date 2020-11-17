@@ -7,7 +7,8 @@
 
 
 class Recipient {
-
+public:
+    virtual ~Recipient() = default;
 };
 
 

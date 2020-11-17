@@ -10,12 +10,9 @@
 #include "Notificator.h"
 #include "../error/ErrorHandler.h"
 
-class NullNotificator : Notificator {
+class NullNotificator : public Notificator {
 public:
-    void notify(const Message& message, const std::vector<Contact*>& contacts) const override;
-
-protected:
-    [[nodiscard]] ErrorHandler& getErrorHandler() const override;
+    void notify(const Message* message, const std::vector<Contact*>& contacts) const;
 };
 
 

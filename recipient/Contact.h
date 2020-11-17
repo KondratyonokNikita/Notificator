@@ -13,7 +13,7 @@ class Contact {
 public:
     explicit Contact(std::string name);
     std::string name;
-    std::vector<Recipient> recipients;
+    std::vector<Recipient*> recipients;
 };
 
 

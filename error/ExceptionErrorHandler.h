@@ -7,9 +7,9 @@
 
 #include "ErrorHandler.h"
 
-class ExceptionErrorHandler : ErrorHandler {
+class ExceptionErrorHandler : public ErrorHandler {
 public:
-    void handle(const Error& error) const override;
+    void handle(const Error* error) const;
 };
 
 

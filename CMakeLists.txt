@@ -19,8 +19,6 @@ add_executable(Notificator
         message/TextMessage.cpp
         message/TextMessage.h
         message/Message.h
-        message/BinaryMessage.cpp
-        message/BinaryMessage.h
 
         error/ErrorHandler.h
         error/LogErrorHandler.cpp

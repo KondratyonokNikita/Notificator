@@ -4,6 +4,6 @@
 
 #include "IgnoreErrorHandler.h"
 
-void IgnoreErrorHandler::handle(const Error &error) const {
+void IgnoreErrorHandler::handle(const Error* error) const {
 //    do nothing
 }

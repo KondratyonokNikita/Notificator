@@ -7,8 +7,13 @@
 
 #include "Message.h"
 
-class TextMessage : Message {
+#include <string>
 
+class TextMessage : public Message {
+public:
+    std::string text;
+
+    explicit TextMessage(std::string text);
 };
 
 

@@ -3,3 +3,7 @@
 //
 
 #include "TextMessage.h"
+
+#include <utility>
+
+TextMessage::TextMessage(std::string text) : text(std::move(text)) {}

@@ -7,7 +7,7 @@
 
 #include "Recipient.h"
 
-class TelegramRecipient : Recipient {
+class TelegramRecipient : public Recipient {
 
 };
 

@@ -3,3 +3,5 @@
 //
 
 #include "LogRecipient.h"
+
+LogRecipient::LogRecipient(std::ostream& log) : log(log) {}

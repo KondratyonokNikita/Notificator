@@ -17,10 +17,10 @@ public:
     void addNotificator(const std::string& name, Notificator* notificator);
     void addContact(const std::string& name, Contact* contact);
 
-    void notify(const std::string& notificatorName, const Message& message, const std::vector<Contact*>& contactsVector) const;
-    void notifyAllContacts(const std::string& notificatorName, const Message& message) const;
-    void notifyAllNotificators(const Message& message, const std::vector<Contact*>& contactsVector) const;
-    void notifyAll(const Message& message) const;
+    void notify(const std::string& notificatorName, Message* message, std::vector<Contact*>& contactsVector) const;
+    void notifyAllContacts(const std::string& notificatorName, Message* message) const;
+    void notifyAllNotificators(Message* message, std::vector<Contact*>& contactsVector) const;
+    void notifyAll(Message* message) const;
 
 private:
     std::map<std::string, Notificator*> notificators;

@@ -6,4 +6,4 @@
 
 #include <utility>
 
-Contact::Contact(std::string name) : name(std::move(name)), recipients(std::vector<Recipient>()) {}
+Contact::Contact(std::string name) : name(std::move(name)) {}

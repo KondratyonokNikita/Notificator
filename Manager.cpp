@@ -12,13 +12,13 @@ void Manager::addContact(const std::string& name, Contact* contact) {
     this->contacts[name] = contact;
 }
 
-void Manager::notify(const std::string &notificatorName,
-                     const Message &message,
-                     const std::vector<Contact *> &contactsVector) const {
+void Manager::notify(const std::string& notificatorName,
+                     Message* message,
+                     std::vector<Contact*>& contactsVector) const {
     this->notificators.at(notificatorName)->notify(message, contactsVector);
 }
 
-void Manager::notifyAllContacts(const std::string &notificatorName, const Message &message) const {
+void Manager::notifyAllContacts(const std::string& notificatorName, Message* message) const {
     std::vector<Contact*> contactsVector;
     for (auto const& value: this->contacts) {
         contactsVector.push_back(value.second);
@@ -26,13 +26,13 @@ void Manager::notifyAllContacts(const std::string &notificatorName, const Messag
     this->notify(notificatorName, message, contactsVector);
 }
 
-void Manager::notifyAllNotificators(const Message &message, const std::vector<Contact *> &contactsVector) const {
+void Manager::notifyAllNotificators(Message* message, std::vector<Contact*>& contactsVector) const {
     for (auto const& value: this->notificators) {
         this->notify(value.first, message, contactsVector);
     }
 }
 
-void Manager::notifyAll(const Message &message) const {
+void Manager::notifyAll(Message* message) const {
     for (auto const& value: this->notificators) {
         this->notifyAllContacts(value.first, message);
     }

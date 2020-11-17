@@ -7,7 +7,7 @@
 
 #include "Recipient.h"
 
-class EmailRecipient : Recipient {
+class EmailRecipient : public Recipient {
 
 };
 

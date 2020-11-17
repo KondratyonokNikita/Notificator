@@ -6,6 +6,6 @@
 
 #include <stdexcept>
 
-void ExceptionErrorHandler::handle(const Error &error) const {
-    throw std::runtime_error(error.message);
+void ExceptionErrorHandler::handle(const Error* error) const {
+    throw std::runtime_error(error->message);
 }

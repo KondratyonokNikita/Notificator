@@ -7,7 +7,8 @@
 
 // interface
 class Message {
-
+public:
+    virtual ~Message() = default;
 };
 
 

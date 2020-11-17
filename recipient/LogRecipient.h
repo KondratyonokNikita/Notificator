@@ -6,9 +6,13 @@
 #define NOTIFICATOR_LOGRECIPIENT_H
 
 #include "Recipient.h"
+#include <iostream>
 
-class LogRecipient : Recipient {
+class LogRecipient : public Recipient {
+public:
+    std::ostream& log;
 
+    LogRecipient(std::ostream& log);
 };
 
 

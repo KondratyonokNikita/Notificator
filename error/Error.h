@@ -10,6 +10,8 @@
 class Error {
 public:
     const std::string message;
+
+    explicit Error(std::string message);
 };
 
 

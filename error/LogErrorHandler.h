@@ -9,12 +9,12 @@
 
 #include "ErrorHandler.h"
 
-class LogErrorHandler : ErrorHandler {
+class LogErrorHandler : public ErrorHandler {
 public:
     std::ostream& log;
 
-    LogErrorHandler(std::ostream &log);
-    void handle(const Error& error) const override;
+    LogErrorHandler(std::ostream& log);
+    void handle(const Error* error) const;
 };
 
 

@@ -4,10 +4,6 @@
 
 #include "TelegramNotificator.h"
 
-void TelegramNotificator::notify(const Message& message, const std::vector<Contact*>& contacts) const {
-//    TODO implement
-}
-
-ErrorHandler &TelegramNotificator::getErrorHandler() const {
+void TelegramNotificator::notify(const Message* message, const std::vector<Contact*>& contacts) const {
 //    TODO implement
 }

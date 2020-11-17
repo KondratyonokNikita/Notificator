@@ -10,7 +10,7 @@
 // interface
 class ErrorHandler {
 public:
-    virtual void handle(const Error& error) const = 0;
+    virtual void handle(const Error* error) const = 0;
 };
 
 
